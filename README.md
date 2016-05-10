@@ -13,7 +13,8 @@ Since then this is what I have created.. Enjoy 😄
 
 <h2>CineSearch</h2> - App I created for a coding challenge. Glad I found the API.
 API LINKS: https://www.themoviedb.org/documentation/api && http://docs.themoviedb.apiary.io/#
+<br>
 ![Movie Details](https://github.com/JosephGarcia/Portfolio-Images/blob/master/Movie/MovieDetails.png)
-<img src="https://github.com/JosephGarcia/Portfolio-Images/blob/master/Movie/MovieSearch.png" width="250" height="250">
+<img src="https://github.com/JosephGarcia/Portfolio-Images/blob/master/Movie/MovieSearch.png" width="375" height="667">
 ![Movie Homepage](https://github.com/JosephGarcia/Portfolio-Images/blob/master/Movie/MovieHome.png)
 ![Movie Search] (https://github.com/JosephGarcia/Portfolio-Images/blob/master/Movie/MovieSearch.png)
