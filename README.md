@@ -10,3 +10,8 @@ I had a hard time finding inspiration when doing web apps. I always dreamt of al
 
 Shortly after my first PHP gig (contract work) I switched over to learn iOS development and never looked back. 
 Since then this is what I have created.. Enjoy 😄
+
+CineSearch - App I created for a coding challenge. Glad I found the API.
+API LINKS: https://www.themoviedb.org/documentation/api && http://docs.themoviedb.apiary.io/#
+![Movie Details](https://github.com/JosephGarcia/Portfolio-Images/blob/master/Movie/MovieDetails.png)
+
