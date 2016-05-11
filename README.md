@@ -30,4 +30,11 @@ Since then this is what I have created.. Enjoy 😄
 <img src="https://github.com/JosephGarcia/Portfolio-Images/blob/master/UFC/FightStats.png" width="375" height="667">
 <br>
 
+<h2>Custom Table Views && Collection Views</h2>
+- I love everything that iOS brings, especially it's attention to design.
+<br>
+<img src="https://github.com/JosephGarcia/Portfolio-Images/blob/master/Others/RotationCell.gif" width="375" height="667">
+<img src="https://github.com/JosephGarcia/Portfolio-Images/blob/master/Others/SlideInEffect.gif" width="375" height="667">
+<br>
+
 
