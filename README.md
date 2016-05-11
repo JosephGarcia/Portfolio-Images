@@ -33,8 +33,8 @@ Since then this is what I have created.. Enjoy 😄
 <h2>Custom Table Views && Collection Views</h2>
 - I love everything that iOS brings, especially it's attention to design.
 <br>
-![Rotation Cell](https://github.com/JosephGarcia/Portfolio-Images/blob/master/Others/RotationCell.gif)
-![Slide In Effect](https://github.com/JosephGarcia/Portfolio-Images/blob/master/Others/SlideInEffect.gif)
+<img src="https://github.com/JosephGarcia/Portfolio-Images/blob/master/Others/RotationCell.gif" width="375" height="667" loop=infinite >
+<img src="https://github.com/JosephGarcia/Portfolio-Images/blob/master/Others/SlideInEffect.gif" width="375" height="667" loop=infinite >
 <br>
 
 
