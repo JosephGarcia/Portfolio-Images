@@ -11,9 +11,24 @@ import MapKit
 
 class MapViewController: UIViewController, MKMapViewDelegate {
     
+    
+    var currentTransportType = MKDirectionsTransportType.Automobile
+    var restaurant:Restaurant!
+    let locationManager = CLLocationManager()
+    var currentPlacemark: CLPlacemark?
+    
+    @IBOutlet weak var segmentController: UISegmentedControl!
+    
     @IBOutlet weak var mapView:MKMapView!
     
     @IBAction func getDirections(sender: AnyObject) {
+        
+        switch segmentController.selectedSegmentIndex {
+        case 0: currentTransportType = MKDirectionsTransportType.Automobile
+        case 1: currentTransportType = MKDirectionsTransportType.Walking
+        default: break
+        }
+        segmentController.hidden = false
         
         guard let currentPlacemark = currentPlacemark else {
             return
@@ -24,7 +39,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         directionRequest.source = MKMapItem.mapItemForCurrentLocation()
         let destinationPlacemark = MKPlacemark(placemark: currentPlacemark)
         directionRequest.destination = MKMapItem(placemark: destinationPlacemark)
-        directionRequest.transportType = MKDirectionsTransportType.Automobile
+        directionRequest.transportType = currentTransportType
         
         //CALCULATE DIRECTIONS
         let directions = MKDirections(request: directionRequest)
@@ -38,18 +53,21 @@ class MapViewController: UIViewController, MKMapViewDelegate {
                 return
             }
             let route = routeResponse.routes[0]
+            self.mapView.removeOverlays(self.mapView.overlays)
             self.mapView.addOverlay(route.polyline, level:  MKOverlayLevel.AboveRoads)
+            
+            let rect = route.polyline.boundingMapRect
+            self.mapView.setRegion(MKCoordinateRegionForMapRect(rect), animated: true)
         }
     }
     
-    
-    var restaurant:Restaurant!
-    let locationManager = CLLocationManager()
-    var currentPlacemark: CLPlacemark?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        segmentController.hidden = true
+        segmentController.addTarget(self, action: "getDirections:", forControlEvents: .ValueChanged)
         locationManager.requestWhenInUseAuthorization()
         let status = CLLocationManager.authorizationStatus()
         
@@ -87,8 +105,8 @@ class MapViewController: UIViewController, MKMapViewDelegate {
                 }
             }
         })
-
     }
+    
     
     func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
         let renderer = MKPolylineRenderer(overlay: overlay)
