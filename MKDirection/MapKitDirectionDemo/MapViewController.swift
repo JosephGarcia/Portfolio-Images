@@ -16,6 +16,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     var restaurant:Restaurant!
     let locationManager = CLLocationManager()
     var currentPlacemark: CLPlacemark?
+    var currentRoute: MKRoute?
     
     @IBOutlet weak var segmentController: UISegmentedControl!
     
@@ -53,6 +54,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
                 return
             }
             let route = routeResponse.routes[0]
+            self.currentRoute = route
             self.mapView.removeOverlays(self.mapView.overlays)
             self.mapView.addOverlay(route.polyline, level:  MKOverlayLevel.AboveRoads)
             
@@ -140,24 +142,23 @@ class MapViewController: UIViewController, MKMapViewDelegate {
             annotationView?.pinTintColor = UIColor.orangeColor()
         }
         
+        annotationView?.rightCalloutAccessoryView = UIButton(type: UIButtonType.DetailDisclosure)
+        
         return annotationView
     }
-
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        performSegueWithIdentifier("showRoute", sender: view)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "showRoute" {
+            if let routeVC = segue.destinationViewController as? RouteTableViewController {
+                if let steps = currentRoute?.steps {
+                    routeVC.routeSteps = steps
+                }
+            }
+        }
     }
-    */
 
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C070FBE1CEAA22900FEC2C5 /* RouteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C070FBD1CEAA22900FEC2C5 /* RouteTableViewController.swift */; };
 		F41EB4E11A1AEB1100DAF540 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41EB4E01A1AEB1100DAF540 /* AppDelegate.swift */; };
 		F41EB4E61A1AEB1100DAF540 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F41EB4E41A1AEB1100DAF540 /* Main.storyboard */; };
 		F41EB4E81A1AEB1100DAF540 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F41EB4E71A1AEB1100DAF540 /* Images.xcassets */; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8C070FBD1CEAA22900FEC2C5 /* RouteTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteTableViewController.swift; sourceTree = "<group>"; };
 		F41EB4DB1A1AEB1100DAF540 /* MapKitDirectionDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapKitDirectionDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F41EB4DF1A1AEB1100DAF540 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F41EB4E01A1AEB1100DAF540 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C070FBB1CEAA1F400FEC2C5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F41EB5001A1AEBC100DAF540 /* RestaurantTableViewController.swift */,
+				F41EB50A1A1AF5B700DAF540 /* MapViewController.swift */,
+				8C070FBD1CEAA22900FEC2C5 /* RouteTableViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		8C070FBC1CEAA21000FEC2C5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F41EB50C1A1AF86A00DAF540 /* Restaurant.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		F41EB4D21A1AEB1100DAF540 = {
 			isa = PBXGroup;
 			children = (
@@ -85,14 +105,13 @@
 		F41EB4DD1A1AEB1100DAF540 /* MapKitDirectionDemo */ = {
 			isa = PBXGroup;
 			children = (
+				8C070FBC1CEAA21000FEC2C5 /* Model */,
+				8C070FBB1CEAA1F400FEC2C5 /* Controllers */,
 				F41EB4E01A1AEB1100DAF540 /* AppDelegate.swift */,
 				F41EB4E41A1AEB1100DAF540 /* Main.storyboard */,
 				F41EB4E71A1AEB1100DAF540 /* Images.xcassets */,
 				F41EB4E91A1AEB1100DAF540 /* LaunchScreen.xib */,
 				F41EB4DE1A1AEB1100DAF540 /* Supporting Files */,
-				F41EB5001A1AEBC100DAF540 /* RestaurantTableViewController.swift */,
-				F41EB50A1A1AF5B700DAF540 /* MapViewController.swift */,
-				F41EB50C1A1AF86A00DAF540 /* Restaurant.swift */,
 			);
 			path = MapKitDirectionDemo;
 			sourceTree = "<group>";
@@ -229,6 +248,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C070FBE1CEAA22900FEC2C5 /* RouteTableViewController.swift in Sources */,
 				F41EB50D1A1AF86A00DAF540 /* Restaurant.swift in Sources */,
 				F41EB5011A1AEBC100DAF540 /* RestaurantTableViewController.swift in Sources */,
 				F41EB4E11A1AEB1100DAF540 /* AppDelegate.swift in Sources */,
