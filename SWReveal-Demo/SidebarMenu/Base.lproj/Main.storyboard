@@ -22,6 +22,7 @@
                     <connections>
                         <segue destination="c8U-hf-vWv" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="b4Q-Yt-b3E"/>
                         <segue destination="dXH-rC-dKS" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="yVC-cD-tS4"/>
+                        <segue destination="uTA-6z-QAS" kind="custom" identifier="sw_right" customClass="SWRevealViewControllerSegueSetController" id="AMq-xe-cR7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -149,8 +150,10 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="News" id="ovY-ud-e84">
                         <barButtonItem key="leftBarButtonItem" image="menu" id="bvR-yD-ToH"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="organize" id="N4a-cJ-Qvf"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="extraButton" destination="N4a-cJ-Qvf" id="VKc-74-axG"/>
                         <outlet property="menuButton" destination="bvR-yD-ToH" id="Rui-eS-C5i"/>
                     </connections>
                 </tableViewController>
@@ -516,7 +519,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </mapView>
             </objects>
-            <point key="canvasLocation" x="225" y="953"/>
+            <point key="canvasLocation" x="233" y="951"/>
         </scene>
     </scenes>
     <resources>
@@ -530,6 +533,6 @@
         <image name="tag" width="1024" height="1024"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tKm-Pe-qSV"/>
+        <segue reference="yVC-cD-tS4"/>
     </inferredMetricsTieBreakers>
 </document>

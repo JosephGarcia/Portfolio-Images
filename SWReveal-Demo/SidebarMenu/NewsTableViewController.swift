@@ -11,6 +11,8 @@ import UIKit
 class NewsTableViewController: UITableViewController {
     @IBOutlet weak var menuButton:UIBarButtonItem!
 
+    @IBOutlet weak var extraButton: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,6 +22,10 @@ class NewsTableViewController: UITableViewController {
             
             view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
+        
+        revealViewController().rightViewRevealWidth = 150
+        extraButton.target = revealViewController()
+        extraButton.action = "rightRevealToggle:"
     }
 
     override func didReceiveMemoryWarning() {
