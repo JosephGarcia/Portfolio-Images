@@ -14,7 +14,12 @@ class PhotoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        if revealViewController() != nil {
+            menuButton.target = revealViewController()
+            menuButton.action = "revealToggle:"
+            
+            view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
     }
 
     override func didReceiveMemoryWarning() {
